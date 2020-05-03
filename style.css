@@ -323,14 +323,3 @@ input:focus, textarea:focus {
 .fab:hover {
     cursor: pointer;
 }
-
-@keyframes moveTitleTop {
-    from {
-        position: absolute;
-        top: 0;
-    }
-    to {
-        position: absolute;
-        top: -50px;
-    }
-}
