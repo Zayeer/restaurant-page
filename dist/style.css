@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "introScript";
+    src: url(/dist/fonts/IntroScriptDemo-Medium.otf);
+}
+
+body {
+    background: url("/dist/images/homepage.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.nav-container {
+    list-style: none;
+    display: flex;
+    justify-content:flex-end;
+    font-size: 2em;
+    padding: 10px; 
+    opacity: 0.8;
+}
+
+.nav-container li {
+    margin-right: 50px;
+    font-family: "introScript";
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-container li:hover {
+    cursor: pointer;
+}
+
+.nav-container li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-container li a:focus {
+    color: yellow;
+}
+/*----------*/
+/*---home---*/
+/*----------*/
+
+.home-content {
+    width: 70%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+/*---heading---*/
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+}
+
+h1 {
+    font-size: 4em;
+    font-family: "introScript";
+    color: #fff;
+}
+
+#seed {
+    visibility: hidden;
+    font-size: 4em;
+    color: #fff; 
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+.h1Transition {
+    animation: h1Transition 3s 1;
+}
+
+@keyframes h1Transition {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.seedTransition {
+    animation: seedTransition 3s 1;
+}
+
+
+
+@keyframes seedTransition {
+    0% {
+        transform: rotate(90deg);
+        }
+    90% {
+        transform: rotate(0deg);
+        color: rgba(0, 255, 0, 1);
+    }    
+    100% {
+        color:#fff;
+        opacity: 1;
+      }
+} 
+
+/*----main----*/
+
+
+.about-us {
+    background: rgba(0, 0, 0, 0.8);
+    line-height: 20px;
+    width: 50%;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    position: relative;
+}
+
+.about-us h2 {
+    text-decoration: underline;
+}
+
+.about-us p {
+    font-style: italic;
+    text-align: center;
+    line-height: 25px;
+}
+
+/*--------------------*/
+/* -----MENU----------*/
+
+.menu-content {
+    display: none;
+    position: relative;
+}
+
+#slider {
+    height: 20em;
+    width: 20em;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#slider img {
+    height: 20em;
+    width: 20em;
+    position: absolute;
+    border: 5px solid #555;
+}
+
+#slider img:not(:first-child) {
+    right: 20em;
+}
+
+@keyframes right-slide1 {
+    from {
+        left: 0;
+    }
+    to {
+        left: 20em;
+    }
+}
+
+@keyframes right-slide2 {
+    from {
+        left: -20em;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes left-slide1 {
+    from {
+        right: 0;
+    }
+    to {
+        right: 20em;
+    }
+}
+
+@keyframes left-slide2 {
+    from {
+        left: 20em;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.slide-buttons {
+    background: rgba(10, 15, 20, 0.8);
+    display: flex;
+    width: 20em;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.left-button {
+    padding: 10px;
+    visibility: hidden;
+}
+
+.right-button {
+    padding: 10px;
+}
+
+.left-button, .right-button {
+    background: yellow;
+    border: none;
+    opacity: 0.8;
+}
+
+button:focus {
+    outline: none;
+}
+
+.right-button:hover, .left-button:hover {
+    cursor: pointer;
+}
+
+.name-price {
+    background: rgba(10, 15, 20, 0.8);
+    color: #fff;
+    width: 20em;
+    height: 10em;
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/*----CONTACT----*/
+
+.contact-content {
+    margin: auto;
+    margin-top: 100px; 
+    width: 80%;
+    height: 70vh;
+    display: none;
+    background: rgba(10, 15, 20, 0.8);
+    border-radius: 30px;
+    position: relative;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    align-items: center;
+}
+
+input, textarea, #contact-send {
+    width: 50%;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    color: #fff;
+}
+
+#contact-name, #contact-email, #contact-textarea {
+    background: rgba(10, 15, 20, 0.8);
+    border: none;
+    border-bottom: 5px solid #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+#contact-send {
+    color: #000;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#contact-send:hover {
+    cursor: pointer;
+}
+
+.contact-address {
+    width: 50%;
+    margin: 60px auto 0;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contact-address h3 {
+    text-decoration: underline;
+}
+
+.fab {
+    margin: 20px;
+    font-size: 3em;
+    color: #fff;
+    padding: 10px;
+}
+
+.fab:hover {
+    cursor: pointer;
+}
+
+@keyframes moveTitleTop {
+    from {
+        position: absolute;
+        top: 0;
+    }
+    to {
+        position: absolute;
+        top: -50px;
+    }
+}
