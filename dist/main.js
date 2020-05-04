@@ -204,15 +204,15 @@ content.innerHTML =`<ul class="nav-container">
        </div>
        <div class="menu-content">
             <figure id="slider">
-               <img src="/dist/images/Aloo_Gobi.jpg" alt="aloo-gobi">
-               <img src="/dist/images/aloo_palak.jpg" alt="aloo-palak">
-               <img src="/dist/images/chana_masala.jpg" alt="chana-masala">
-               <img src="/dist/images/vegetable_korma.jpg" alt="vegetable-korma">
-               <img src="/dist/images/palak_paneer.jpg" alt="palak-paneer">
-               <img src="/dist/images/Mutter_Paneer.png" alt="mutter-paneer">
-               <img src="/dist/images/Paneer_Butter_Masala.jpg" alt="paneer-butter-masala">
-               <img src="/dist/images/Bhindi_Masala.jpg" alt="bhindi-masala">
-               <img src="/dist/images/eggplant_masala.jpg" alt="eggplant-masala">
+               <img src="assets/images/Aloo_Gobi.jpg" alt="aloo-gobi">
+               <img src="assets/images/aloo_palak.jpg" alt="aloo-palak">
+               <img src="assets/images/chana_masala.jpg" alt="chana-masala">
+               <img src="assets/images/vegetable_korma.jpg" alt="vegetable-korma">
+               <img src="assets/images/palak_paneer.jpg" alt="palak-paneer">
+               <img src="assets/images/Mutter_Paneer.png" alt="mutter-paneer">
+               <img src="assets/images/Paneer_Butter_Masala.jpg" alt="paneer-butter-masala">
+               <img src="assets/images/Bhindi_Masala.jpg" alt="bhindi-masala">
+               <img src="assets/images/eggplant_masala.jpg" alt="eggplant-masala">
             </figure>
             <div class="slide-buttons">
                 <div class="left-but-bg">    
