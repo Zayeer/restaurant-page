@@ -10,7 +10,7 @@
 }
 
 body {
-    background: url("./images/homepage.JPG");
+    background: url("../images/homepage.JPG");
     background-size: cover;
     height: 100vh;
 }
