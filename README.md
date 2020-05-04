@@ -10,3 +10,5 @@ Skills used:
 * Webpack 4 
 
 Practically introduced to ES6 modules and module bundlers through this project.
+
+view [online](https://zayeer.github.io/restaurant-page/#) 
