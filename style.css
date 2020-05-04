@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: "introScript";
-    src: url(/dist/fonts/IntroScriptDemo-Medium.otf);
+    src: url(assets/fonts/IntroScriptDemo-Medium.otf);
 }
 
 body {
-    background: url("./images/homepage.JPG");
+    background: url("assets/images/homepage.jpg");
     background-size: cover;
     height: 100vh;
 }
