@@ -1,11 +1,11 @@
 import { displayHome } from "./homepage";
-import { displayMenu, rightSlide, leftSlide} from "./menu";
+import { displayMenu, rightSlide, leftSlide } from "./menu";
 import { displayContact } from "./contact";
 
 const content = document.getElementById("content");
 
 //append required html to the div#content
-content.innerHTML =`<ul class="nav-container">
+content.innerHTML = `<ul class="nav-container">
            <li class="home"><a href="#">Home</a></li>
            <li class="menu"><a href="#">Menu</a></li>
            <li class="contact"><a href="#">Contact</a></li>
@@ -48,33 +48,32 @@ content.innerHTML =`<ul class="nav-container">
                 <p class="price"></p>
             </div>
            </div>
-           <div class="contact-content">
-                 <form class="contact-form">
-                   <input type="text" placeholder="Name*" id="contact-name">
-                   <input type="email" placeholder="Email*" id="contact-email">
-                   <textarea placeholder="Comment Here*" cols="30" rows="10" id="contact-textarea"></textarea>
-                   <button id="contact-send">Send Message</button>
-                 </form>
-                 <div class="contact-address">
-                    <h3>Address:</h3>
-                    <p>XXXX Venice Boulevard Culver City, CA XXXX</p>
-                    <h3>Telephone:</h3>
-                    <p>(XXX)XXX-XXXX</p>
-                    <h3>Mail-Id</h3>
-                    <p>XXXXX@gmail.com</p>
-                    <h3>Business Hours</h3>
-                    <p><strong>Tuesday - Sunday</strong> : 11:00 am to 10:00 pm
-                    <strong>Monday</strong> Closed</p>
-                    <h3>Social Media:</h3>
-                    <div class="contact-icons">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    </div>
-                 </div>
+        <div class="contact-content">
+            <form class="contact-form">
+                <input type="text" placeholder="Name*" id="contact-name">
+                <input type="email" placeholder="Email*" id="contact-email">
+                <textarea placeholder="Comment Here*" cols="30" rows="10" id="contact-textarea"></textarea>
+                <button id="contact-send">Send Message</button>
+            </form>
+            <div class="contact-address">
+                <h3>Address:</h3>
+                <p>XXXX Venice Boulevard Culver City, CA XXXX</p>
+                <h3>Telephone:</h3>
+                <p>(XXX)XXX-XXXX</p>
+                <h3>Mail-Id</h3>
+                <p>XXXXX@gmail.com</p>
+                <h3>Business Hours</h3>
+                <p><strong>Tuesday - Sunday</strong> : 11:00 am to 10:00 pm
+                <strong>Monday</strong> Closed</p>
+                <h3>Social Media:</h3>
+                <div class="contact-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                </div>
+                </div>
            </div> 
-       </div>`
+       </div>`;
 
-      
 //onload and home section
 const leaf = document.querySelector("#seed");
 const title = document.querySelector(".page-title>h1");
@@ -86,18 +85,17 @@ export const menuContent = document.querySelector(".menu-content");
 export const contactContent = document.querySelector(".contact-content");
 
 window.onload = () => {
-    title.classList.add("h1Transition");
-    setTimeout(() => {
-        leaf.style.visibility = "visible";
-        leaf.classList.add("seedTransition");
-    }, 3000);
-}
+  title.classList.add("h1Transition");
+  setTimeout(() => {
+    leaf.classList.add("seedTransition");
+    leaf.style.visibility = "visible";
+  }, 3000);
+};
 title.classList.remove("h1Transition");
 leaf.classList.remove("seedTransition");
 home.style.color = "yellow";
 
-home.addEventListener("click", displayHome);    
-
+home.addEventListener("click", displayHome);
 
 //menu section
 export const rightButton = document.querySelector(".right-button");
@@ -108,11 +106,9 @@ export const itemPrice = document.querySelector(".name-price > .price");
 export const itemData = document.querySelector(".name-price>p");
 export let images = Array.from(document.querySelectorAll("figure>img"));
 
- 
 menu.addEventListener("click", displayMenu);
 rightButton.addEventListener("click", rightSlide); //image slider
-leftButton.addEventListener("click", leftSlide); 
-
+leftButton.addEventListener("click", leftSlide);
 
 //contact section
 
