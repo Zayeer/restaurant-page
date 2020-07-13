@@ -102,20 +102,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function displayContact() {
-    _index__WEBPACK_IMPORTED_MODULE_0__["home"].style.color = "#fff";
-    _index__WEBPACK_IMPORTED_MODULE_0__["menu"].style.color = "#fff";
-    for (let i = 0; i < _index__WEBPACK_IMPORTED_MODULE_0__["images"].length; i++) {
-        if (_index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.hasOwnProperty("animation")) {
-            _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animation = "none";
-            _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animationFillMode = "none";
-        }
+  _index__WEBPACK_IMPORTED_MODULE_0__["home"].style.color = "#fff";
+  _index__WEBPACK_IMPORTED_MODULE_0__["menu"].style.color = "#fff";
+  for (let i = 0; i < _index__WEBPACK_IMPORTED_MODULE_0__["images"].length; i++) {
+    if (_index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.hasOwnProperty("animation")) {
+      _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animation = "none";
+      _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animationFillMode = "none";
     }
-    Object(_menu__WEBPACK_IMPORTED_MODULE_1__["displayNameAndPrice"])(_index__WEBPACK_IMPORTED_MODULE_0__["images"][0]);
-    this.style.color = "yellow";
-    _index__WEBPACK_IMPORTED_MODULE_0__["homeContent"].style.display = "none";
-    _index__WEBPACK_IMPORTED_MODULE_0__["menuContent"].style.display = "none";
-    _index__WEBPACK_IMPORTED_MODULE_0__["contactContent"].style.display = "flex";
-};
+  }
+  Object(_menu__WEBPACK_IMPORTED_MODULE_1__["displayNameAndPrice"])(_index__WEBPACK_IMPORTED_MODULE_0__["images"][0]);
+  this.style.color = "yellow";
+  _index__WEBPACK_IMPORTED_MODULE_0__["homeContent"].style.display = "none";
+  _index__WEBPACK_IMPORTED_MODULE_0__["menuContent"].style.display = "none";
+  _index__WEBPACK_IMPORTED_MODULE_0__["contactContent"].style.display = "grid";
+}
+
 
 /***/ }),
 
@@ -185,7 +186,7 @@ __webpack_require__.r(__webpack_exports__);
 const content = document.getElementById("content");
 
 //append required html to the div#content
-content.innerHTML =`<ul class="nav-container">
+content.innerHTML = `<ul class="nav-container">
            <li class="home"><a href="#">Home</a></li>
            <li class="menu"><a href="#">Menu</a></li>
            <li class="contact"><a href="#">Contact</a></li>
@@ -228,33 +229,32 @@ content.innerHTML =`<ul class="nav-container">
                 <p class="price"></p>
             </div>
            </div>
-           <div class="contact-content">
-                 <form class="contact-form">
-                   <input type="text" placeholder="Name*" id="contact-name">
-                   <input type="email" placeholder="Email*" id="contact-email">
-                   <textarea placeholder="Comment Here*" cols="30" rows="10" id="contact-textarea"></textarea>
-                   <button id="contact-send">Send Message</button>
-                 </form>
-                 <div class="contact-address">
-                    <h3>Address:</h3>
-                    <p>XXXX Venice Boulevard Culver City, CA XXXX</p>
-                    <h3>Telephone:</h3>
-                    <p>(XXX)XXX-XXXX</p>
-                    <h3>Mail-Id</h3>
-                    <p>XXXXX@gmail.com</p>
-                    <h3>Business Hours</h3>
-                    <p><strong>Tuesday - Sunday</strong> : 11:00 am to 10:00 pm
-                    <strong>Monday</strong> Closed</p>
-                    <h3>Social Media:</h3>
-                    <div class="contact-icons">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    </div>
-                 </div>
+        <div class="contact-content">
+            <form class="contact-form">
+                <input type="text" placeholder="Name*" id="contact-name">
+                <input type="email" placeholder="Email*" id="contact-email">
+                <textarea placeholder="Comment Here*" cols="30" rows="10" id="contact-textarea"></textarea>
+                <button id="contact-send">Send Message</button>
+            </form>
+            <div class="contact-address">
+                <h3>Address:</h3>
+                <p>XXXX Venice Boulevard Culver City, CA XXXX</p>
+                <h3>Telephone:</h3>
+                <p>(XXX)XXX-XXXX</p>
+                <h3>Mail-Id</h3>
+                <p>XXXXX@gmail.com</p>
+                <h3>Business Hours</h3>
+                <p><strong>Tuesday - Sunday</strong> : 11:00 am to 10:00 pm
+                <strong>Monday</strong> Closed</p>
+                <h3>Social Media:</h3>
+                <div class="contact-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                </div>
+                </div>
            </div> 
-       </div>`
+       </div>`;
 
-      
 //onload and home section
 const leaf = document.querySelector("#seed");
 const title = document.querySelector(".page-title>h1");
@@ -266,18 +266,17 @@ const menuContent = document.querySelector(".menu-content");
 const contactContent = document.querySelector(".contact-content");
 
 window.onload = () => {
-    title.classList.add("h1Transition");
-    setTimeout(() => {
-        leaf.style.visibility = "visible";
-        leaf.classList.add("seedTransition");
-    }, 3000);
-}
+  title.classList.add("h1Transition");
+  setTimeout(() => {
+    leaf.classList.add("seedTransition");
+    leaf.style.visibility = "visible";
+  }, 3000);
+};
 title.classList.remove("h1Transition");
 leaf.classList.remove("seedTransition");
 home.style.color = "yellow";
 
-home.addEventListener("click", _homepage__WEBPACK_IMPORTED_MODULE_0__["displayHome"]);    
-
+home.addEventListener("click", _homepage__WEBPACK_IMPORTED_MODULE_0__["displayHome"]);
 
 //menu section
 const rightButton = document.querySelector(".right-button");
@@ -288,15 +287,14 @@ const itemPrice = document.querySelector(".name-price > .price");
 const itemData = document.querySelector(".name-price>p");
 let images = Array.from(document.querySelectorAll("figure>img"));
 
- 
 menu.addEventListener("click", _menu__WEBPACK_IMPORTED_MODULE_1__["displayMenu"]);
 rightButton.addEventListener("click", _menu__WEBPACK_IMPORTED_MODULE_1__["rightSlide"]); //image slider
-leftButton.addEventListener("click", _menu__WEBPACK_IMPORTED_MODULE_1__["leftSlide"]); 
-
+leftButton.addEventListener("click", _menu__WEBPACK_IMPORTED_MODULE_1__["leftSlide"]);
 
 //contact section
 
 contact.addEventListener("click", _contact__WEBPACK_IMPORTED_MODULE_2__["displayContact"]);
+
 
 /***/ }),
 
@@ -316,96 +314,108 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./src/index.js");
 
 
-
 function displayNameAndPrice(image) {
-    switch (image) {
-        case _index__WEBPACK_IMPORTED_MODULE_0__["images"][0]: _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Aloo Gobi";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Potato & cauliflower cooked in savory sauce.";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$10.95";
-            break;
-        case _index__WEBPACK_IMPORTED_MODULE_0__["images"][1]: _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Aloo Palak";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Potato and spinach cooked in aromatic sauce";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$10.95";
-            break;
-        case _index__WEBPACK_IMPORTED_MODULE_0__["images"][2]: _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Chana Masala";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Garbanzo beans cooked in exotic spices.";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$10.95";
-            break;
-        case _index__WEBPACK_IMPORTED_MODULE_0__["images"][3]: _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Vegetable Korma";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Mixed vegetables cooked in coconut sauce.";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$10.95";
-            break;
-        case _index__WEBPACK_IMPORTED_MODULE_0__["images"][4]: _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Palak Paneer";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Indian cottage cheese cooked with pureed spinach & spices.";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$12.95";
-            break;
-        case _index__WEBPACK_IMPORTED_MODULE_0__["images"][5]: _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Mutter Paneer";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Indian cottage cheese & green peas cooked in savory sauce.";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$12.95";
-            break;
-        case _index__WEBPACK_IMPORTED_MODULE_0__["images"][6]: _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Paneer Butter Masala";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Indian cottage cheese cooked in a silky smooth tomato gravy.";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$12.95";
-            break;
-        case _index__WEBPACK_IMPORTED_MODULE_0__["images"][7]: _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Bhindi Masala";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Okra cooked in spices.";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$12.95";
-            break;
-        case _index__WEBPACK_IMPORTED_MODULE_0__["images"][8]: _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Eggplant Masala";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Eggplant cooked in spices.";
-            _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$12.95";
-            break;
-    }
+  switch (image) {
+    case _index__WEBPACK_IMPORTED_MODULE_0__["images"][0]:
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Aloo Gobi";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Potato & cauliflower cooked in savory sauce.";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$10.95";
+      break;
+    case _index__WEBPACK_IMPORTED_MODULE_0__["images"][1]:
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Aloo Palak";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Potato and spinach cooked in aromatic sauce";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$10.95";
+      break;
+    case _index__WEBPACK_IMPORTED_MODULE_0__["images"][2]:
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Chana Masala";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Garbanzo beans cooked in exotic spices.";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$10.95";
+      break;
+    case _index__WEBPACK_IMPORTED_MODULE_0__["images"][3]:
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Vegetable Korma";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Mixed vegetables cooked in coconut sauce.";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$10.95";
+      break;
+    case _index__WEBPACK_IMPORTED_MODULE_0__["images"][4]:
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Palak Paneer";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText =
+        "Indian cottage cheese cooked with pureed spinach & spices.";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$12.95";
+      break;
+    case _index__WEBPACK_IMPORTED_MODULE_0__["images"][5]:
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Mutter Paneer";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText =
+        "Indian cottage cheese & green peas cooked in savory sauce.";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$12.95";
+      break;
+    case _index__WEBPACK_IMPORTED_MODULE_0__["images"][6]:
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Paneer Butter Masala";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText =
+        "Indian cottage cheese cooked in a silky smooth tomato gravy.";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$12.95";
+      break;
+    case _index__WEBPACK_IMPORTED_MODULE_0__["images"][7]:
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Bhindi Masala";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Okra cooked in spices.";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$12.95";
+      break;
+    case _index__WEBPACK_IMPORTED_MODULE_0__["images"][8]:
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemName"].innerText = "Eggplant Masala";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemDesc"].innerText = "Eggplant cooked in spices.";
+      _index__WEBPACK_IMPORTED_MODULE_0__["itemPrice"].innerText = "$12.95";
+      break;
+  }
 }
 
-
 function displayMenu(event) {
-    _index__WEBPACK_IMPORTED_MODULE_0__["homeContent"].style.display = "none";
-    _index__WEBPACK_IMPORTED_MODULE_0__["menuContent"].style.display = "block";
-    displayNameAndPrice(_index__WEBPACK_IMPORTED_MODULE_0__["images"][0]);
-    _index__WEBPACK_IMPORTED_MODULE_0__["home"].style.color = "white";
-    _index__WEBPACK_IMPORTED_MODULE_0__["contact"].style.color = "white";
-    this.style.color = "yellow";
+  _index__WEBPACK_IMPORTED_MODULE_0__["homeContent"].style.display = "none";
+  _index__WEBPACK_IMPORTED_MODULE_0__["contactContent"].style.display = "none";
+  _index__WEBPACK_IMPORTED_MODULE_0__["menuContent"].style.display = "block";
+  displayNameAndPrice(_index__WEBPACK_IMPORTED_MODULE_0__["images"][0]);
+  _index__WEBPACK_IMPORTED_MODULE_0__["home"].style.color = "white";
+  _index__WEBPACK_IMPORTED_MODULE_0__["contact"].style.color = "white";
+  this.style.color = "yellow";
 }
 
 function rightSlide(event) {
-    for (let i = 0; i < _index__WEBPACK_IMPORTED_MODULE_0__["images"].length; i++) {
-        let imageStyleVal = getComputedStyle(_index__WEBPACK_IMPORTED_MODULE_0__["images"][i]);
-        if (imageStyleVal.left === "0px") {
-            _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animation = "right-slide1 2s";
-            _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animationFillMode = "forwards";
-            _index__WEBPACK_IMPORTED_MODULE_0__["images"][i + 1].style.animation = "right-slide2 2s";
-            _index__WEBPACK_IMPORTED_MODULE_0__["images"][i + 1].style.animationFillMode = "forwards";
-            displayNameAndPrice(_index__WEBPACK_IMPORTED_MODULE_0__["images"][i + 1]);
-            if (i === 0) {
-                _index__WEBPACK_IMPORTED_MODULE_0__["leftButton"].style.visibility = "visible";
-            } else if (i === _index__WEBPACK_IMPORTED_MODULE_0__["images"].length - 2) {
-                event.target.style.visibility = "hidden";
-            }
-            return;
-        }
+  for (let i = 0; i < _index__WEBPACK_IMPORTED_MODULE_0__["images"].length; i++) {
+    let imageStyleVal = getComputedStyle(_index__WEBPACK_IMPORTED_MODULE_0__["images"][i]);
+    if (imageStyleVal.left === "0px") {
+      _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animation = "right-slide1 2s";
+      _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animationFillMode = "forwards";
+      _index__WEBPACK_IMPORTED_MODULE_0__["images"][i + 1].style.animation = "right-slide2 2s";
+      _index__WEBPACK_IMPORTED_MODULE_0__["images"][i + 1].style.animationFillMode = "forwards";
+      displayNameAndPrice(_index__WEBPACK_IMPORTED_MODULE_0__["images"][i + 1]);
+      if (i === 0) {
+        _index__WEBPACK_IMPORTED_MODULE_0__["leftButton"].style.visibility = "visible";
+      } else if (i === _index__WEBPACK_IMPORTED_MODULE_0__["images"].length - 2) {
+        event.target.style.visibility = "hidden";
+      }
+      return;
     }
+  }
 }
 
 function leftSlide(event) {
-    for (let i = _index__WEBPACK_IMPORTED_MODULE_0__["images"].length - 1; i >= 0; i--) {
-        let imageStyleVal = getComputedStyle(_index__WEBPACK_IMPORTED_MODULE_0__["images"][i]);
-        if (imageStyleVal.left === "0px") {
-            _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animation = "left-slide1 2s";
-            _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animationFillMode = "forwards";
-            _index__WEBPACK_IMPORTED_MODULE_0__["images"][i - 1].style.animation = "left-slide2 2s";
-            _index__WEBPACK_IMPORTED_MODULE_0__["images"][i - 1].style.animationFillMode = "forwards";
-            displayNameAndPrice(_index__WEBPACK_IMPORTED_MODULE_0__["images"][i - 1]);
-            if (i === 1) {
-                event.target.style.visibility = "hidden";
-                _index__WEBPACK_IMPORTED_MODULE_0__["rightButton"].style.visibility = "visible";
-            } else if (_index__WEBPACK_IMPORTED_MODULE_0__["images"].length - 2) {
-                _index__WEBPACK_IMPORTED_MODULE_0__["rightButton"].style.visibility = "visible";
-            }
-            return;
-        }
+  for (let i = _index__WEBPACK_IMPORTED_MODULE_0__["images"].length - 1; i >= 0; i--) {
+    let imageStyleVal = getComputedStyle(_index__WEBPACK_IMPORTED_MODULE_0__["images"][i]);
+    if (imageStyleVal.left === "0px") {
+      _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animation = "left-slide1 2s";
+      _index__WEBPACK_IMPORTED_MODULE_0__["images"][i].style.animationFillMode = "forwards";
+      _index__WEBPACK_IMPORTED_MODULE_0__["images"][i - 1].style.animation = "left-slide2 2s";
+      _index__WEBPACK_IMPORTED_MODULE_0__["images"][i - 1].style.animationFillMode = "forwards";
+      displayNameAndPrice(_index__WEBPACK_IMPORTED_MODULE_0__["images"][i - 1]);
+      if (i === 1) {
+        event.target.style.visibility = "hidden";
+        _index__WEBPACK_IMPORTED_MODULE_0__["rightButton"].style.visibility = "visible";
+      } else if (_index__WEBPACK_IMPORTED_MODULE_0__["images"].length - 2) {
+        _index__WEBPACK_IMPORTED_MODULE_0__["rightButton"].style.visibility = "visible";
+      }
+      return;
     }
+  }
 }
+
 
 /***/ })
 
