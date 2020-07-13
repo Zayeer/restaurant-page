@@ -340,6 +340,14 @@ textarea:focus {
     width: 80%;
   }
 
+  h1 {
+    font-size: 3.5em;
+  }
+
+  #seed {
+    font-size: 3.5em;
+  }
+
   .contact-content {
     height: auto;
     grid-template-columns: 1fr;
